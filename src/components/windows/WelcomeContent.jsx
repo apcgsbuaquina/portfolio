@@ -9,7 +9,7 @@ export default function WelcomeContent({ onExplore }) {
       </p>
 
       {/* Stats Section */}
-      <div className="stats-divider flex justify-around my-5 py-4 border-y-2 border-retro-border-dark">
+      <div className="stats-divider flex flex-wrap justify-around my-5 py-4 border-y-2 border-retro-border-dark">
         {[
           { icon: '🌱', value: '100+', label: 'Projects' },
           { icon: '💡', value: '5+', label: 'Years Experience' },
@@ -33,7 +33,7 @@ export default function WelcomeContent({ onExplore }) {
       </div>
 
       <p className="font-retro text-base font-normal leading-none mb-3 text-retro-text-dark">
-        You can explore the features of retroOS!
+        Learn more about me by exploring the website!
       </p>
 
       <button

@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import MenuBar from './components/MenuBar'
 import Desktop from './components/Desktop'
+import MobileLayout from './components/MobileLayout'
 import useWindowManager from './hooks/useWindowManager'
+import useIsMobile from './hooks/useIsMobile'
 
-export default function App() {
+function DesktopApp() {
   const {
     windows,
     selectedIcon,
@@ -47,4 +49,14 @@ export default function App() {
       />
     </div>
   )
+}
+
+export default function App() {
+  const isMobile = useIsMobile()
+
+  if (isMobile) {
+    return <MobileLayout />
+  }
+
+  return <DesktopApp />
 }

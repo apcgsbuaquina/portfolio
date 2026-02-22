@@ -26,7 +26,7 @@ function ProjectImage({ src, title }) {
   const showImage = Boolean(src) && !hasError
 
   return (
-    <div className="w-[320px] max-w-full h-[180px] mb-3 bg-retro-beige border-2 border-retro-border-dark flex items-center justify-center overflow-hidden">
+    <div className="w-full max-w-[320px] h-[180px] mb-3 bg-retro-beige border-2 border-retro-border-dark flex items-center justify-center overflow-hidden">
       {showImage ? (
         <img
           src={src}
@@ -51,7 +51,7 @@ export default function ProjectsContent({ isMaximized }) {
         {projects.map((project) => (
           <div
             key={project.title}
-            className="w-[320px] max-w-full bg-retro-light p-3 border-2 border-t-retro-border-light border-l-retro-border-light border-b-retro-border-dark border-r-retro-border-dark shadow-retro-outset"
+            className="w-full sm:w-[320px] max-w-full bg-retro-light p-3 border-2 border-t-retro-border-light border-l-retro-border-light border-b-retro-border-dark border-r-retro-border-dark shadow-retro-outset"
           >
             <ProjectImage src={project.image} title={project.title} />
 

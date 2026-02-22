@@ -131,3 +131,27 @@ body {
   width: 1px;
   background: #6b5d47;
 }
+
+/* ============================================
+   MOBILE STYLES
+   ============================================ */
+
+/* Smooth scrolling for mobile layout */
+.mobile-scroll-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  /* Adjust background for mobile */
+  .desktop-bg {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  /* Slightly larger pixel fonts for mobile readability */
+  .font-pixel {
+    letter-spacing: 0.5px;
+  }
+}

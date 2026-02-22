@@ -24,7 +24,7 @@ export default function ContactContent() {
               href={contact.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-retro-text-dark underline hover:opacity-70 transition-opacity"
+              className="text-retro-text-dark underline hover:opacity-70 transition-opacity break-all"
             >
               {contact.text}
             </a>

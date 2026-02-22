@@ -8,7 +8,7 @@ export default function AboutContent() {
         <img
           src="public/images/gallery/pfp.png"
           alt="About me"
-          className="w-[120px] h-[120px] border-2 border-retro-border-dark float-left mr-4 mb-2.5 object-cover shadow-retro-inset bg-[#1a1a1a]"
+          className="w-20 h-20 md:w-[120px] md:h-[120px] border-2 border-retro-border-dark float-left mr-4 mb-2.5 object-cover shadow-retro-inset bg-[#1a1a1a]"
         />
         <p className="font-retro text-base font-normal leading-none mb-3 text-retro-text-dark">
           Hello! I'm a passionate student in hopes of contributing to meaningful projects.
