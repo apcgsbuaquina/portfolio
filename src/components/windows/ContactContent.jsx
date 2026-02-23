@@ -31,17 +31,6 @@ export default function ContactContent() {
           </div>
         ))}
       </div>
-      <button
-        className="retro-btn block mx-auto my-5 font-pixel text-[8px] py-3 px-6 bg-retro-beige text-retro-text-dark cursor-pointer uppercase relative overflow-hidden
-          border-[3px] border-t-retro-border-dark border-l-retro-border-dark border-b-retro-border-light border-r-retro-border-light
-          shadow-retro-outset [text-shadow:1px_1px_0_rgba(255,255,255,0.3)]
-          transition-all duration-100
-          hover:bg-retro-light hover:shadow-retro-hover hover:-translate-y-px
-          active:shadow-retro-inset active:translate-x-px active:translate-y-px
-          focus:outline-2 focus:outline-retro-border-dark focus:outline-offset-2"
-      >
-        Send Message
-      </button>
     </>
   )
 }

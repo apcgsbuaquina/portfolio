@@ -2,22 +2,22 @@ import { useState } from 'react'
 
 const projects = [
   {
-    image: '/images/projects/Mindle.png',
+    image: '/images/projects/mindle.png',
     title: 'Mindle',
     description:
       'This is the first ever project I have contributed on, this stone paved the way for many more projects to come. Anyway, it\'s a simple mental health tracker I built on my first year.',
   },
   {
-    image: '',
-    title: 'Portfolio Commerce App',
+    image: '/images/projects/emailCleaner.png',
+    title: 'Email Cleaner',
     description:
-      'Praesent commodo, justo at bibendum fringilla, velit ligula ultrices turpis, in sodales justo nisl id augue. You can add your stack and features here.',
+      'It is a tool that lets you scan your emails and gives you the option to delete duplicates or spam emails. This was a fun experience working on backend logic for the first time.',
   },
   {
-    image: '',
-    title: 'Realtime Team Platform',
+    image: '/images/projects/ctrlAltElite.png',
+    title: 'Ctrl Alt Elite',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Swap this text with your final project details.',
+      'An e-commerce platform built on outsyystems, integrated with a database for order management.',
   },
 ]
 

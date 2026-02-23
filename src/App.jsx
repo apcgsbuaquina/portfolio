@@ -36,8 +36,8 @@ function DesktopApp() {
   }, [windows, closeWindow])
 
   return (
-    <div className="h-screen overflow-hidden bg-gradient-to-br from-retro-dark to-retro-border-dark">
-      <MenuBar />
+    <div className="h-screen overflow-hidden bg-gradient-to-br from-retro-dark to-retro-border-dark crt-scanline">
+      <MenuBar openWindow={openWindow} />
       <Desktop
         windows={windows}
         selectedIcon={selectedIcon}

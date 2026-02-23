@@ -49,7 +49,7 @@ export default function SpotifyWidget() {
   return (
     <div
       className="absolute right-4 top-4 z-10 select-none"
-      style={{ width: 260 }}
+      style={{ width: 300 }}
     >
       {/* Title bar */}
       <div
@@ -71,7 +71,7 @@ export default function SpotifyWidget() {
           className="bg-retro-beige/90 backdrop-blur-sm border-2
                       border-t-0 border-retro-border-dark border-l-retro-border-dark
                       border-r-retro-border-light border-b-retro-border-light
-                      shadow-retro-outset max-h-[280px] overflow-y-auto window-scrollbar"
+                      shadow-retro-outset max-h-[340px] overflow-y-auto window-scrollbar"
         >
           {loading && (
             <div className="p-3 text-center text-retro-dark font-retro text-sm animate-pulse">
@@ -107,7 +107,7 @@ export default function SpotifyWidget() {
                 <img
                   src={track.albumArt}
                   alt={track.album}
-                  className="w-9 h-9 border border-retro-border-dark/40 flex-shrink-0"
+                  className="w-11 h-11 border border-retro-border-dark/40 flex-shrink-0"
                   style={{ imageRendering: 'auto' }}
                 />
 

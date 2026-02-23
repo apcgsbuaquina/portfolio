@@ -6,7 +6,6 @@ const photos = [
   '/images/gallery/bldgs.jpg',
   '/images/gallery/blk.jpg',
   '/images/gallery/borgar.jpg',
-  '/images/gallery/cats.jpg',
   '/images/gallery/chess.jpg',
   '/images/gallery/city.jpg',
   '/images/gallery/crepe.jpg',
@@ -62,11 +61,11 @@ export default function GalleryContent({ isMaximized = false }) {
       </h2>
       {hasPhotos ? (
         isMaximized ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-4">
+          <div className="grid gap-2 my-2" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))' }}>
             {photos.map((photo, index) => (
               <div
                 key={photo}
-                className="aspect-square bg-retro-beige border-2 border-retro-border-dark overflow-hidden"
+                className="aspect-square bg-retro-beige border border-retro-border-dark overflow-hidden"
               >
                 <img
                   src={photo}
@@ -78,7 +77,7 @@ export default function GalleryContent({ isMaximized = false }) {
           </div>
         ) : (
           <div className="my-4">
-            <div className="w-full max-w-[220px] mx-auto aspect-square bg-retro-beige border-2 border-retro-border-dark overflow-hidden mb-3">
+            <div className="w-full max-w-[280px] mx-auto aspect-square bg-retro-beige border-2 border-retro-border-dark overflow-hidden mb-3">
               <img src={currentPhoto} alt={`Gallery ${currentIndex + 1}`} className="w-full h-full object-cover" />
             </div>
             <div className="flex items-center justify-between">

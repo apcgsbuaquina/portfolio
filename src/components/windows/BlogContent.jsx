@@ -2,12 +2,52 @@ const resources = [
   {
     title: 'w3schools',
     url: 'https://www.w3schools.com/',
-    note: 'Reference guide for web development standards, syntax, and tutorials..',
+    note: 'Reference guide for web development standards, syntax, and tutorials.',
   },
   {
     title: 'github',
     url: 'https://github.com/',
     note: 'Hosting the source code, version history, and frontend architecture for this project.',
+  },
+  {
+    title: 'Gemini',
+    url: 'https://gemini.google.com/',
+    note: 'AI assistant used for brainstorming ideas, debugging code, and generating content drafts.',
+  },
+  {
+    title: 'GitHub Copilot',
+    url: 'https://github.com/features/copilot',
+    note: 'AI pair programming tool used for code suggestions, feature implementation, and debugging.',
+  },
+  {
+    title: 'Tailwind CSS',
+    url: 'https://tailwindcss.com/',
+    note: 'Utility-first CSS framework used for styling the retro desktop interface.',
+  },
+  {
+    title: 'React',
+    url: 'https://react.dev/',
+    note: 'JavaScript library for building the interactive UI components and window system.',
+  },
+  {
+    title: 'Vite',
+    url: 'https://vite.dev/',
+    note: 'Next-generation build tool providing fast development server and optimized production builds.',
+  },
+  {
+    title: 'Vercel',
+    url: 'https://vercel.com/',
+    note: 'Cloud platform for deploying the site and running serverless functions for the Spotify API.',
+  },
+  {
+    title: 'Spotify Web API',
+    url: 'https://developer.spotify.com/documentation/web-api',
+    note: 'API used to fetch recently played tracks for the desktop widget.',
+  },
+  {
+    title: 'Google Fonts',
+    url: 'https://fonts.google.com/',
+    note: 'Source for VT323 and Press Start 2P retro pixel fonts.',
   },
 ]
 

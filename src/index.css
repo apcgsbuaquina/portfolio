@@ -136,6 +136,58 @@ body {
    MOBILE STYLES
    ============================================ */
 
+/* ============================================
+   CRT SCANLINE GLITCH EFFECT
+   ============================================ */
+
+/* Sweeping scanline — a bright line that scrolls top to bottom */
+@keyframes scanline {
+  0% {
+    top: -4px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.crt-scanline::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+  z-index: 9999;
+  pointer-events: none;
+  animation: scanline 6s linear infinite;
+}
+
+/* Subtle static scanlines overlay */
+.crt-scanline::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  z-index: 9998;
+  pointer-events: none;
+}
+
 /* Smooth scrolling for mobile layout */
 .mobile-scroll-container {
   scroll-behavior: smooth;

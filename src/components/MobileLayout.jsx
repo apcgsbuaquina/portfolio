@@ -9,14 +9,13 @@ import GalleryContent from './windows/GalleryContent'
 import GuestbookContent from './windows/GuestbookContent'
 
 const sections = [
-  { id: 'welcome', icon: '★', title: 'Gian Ace Buaquiña' },
   { id: 'about', icon: '★', title: 'About Me' },
   { id: 'projects', icon: '★', title: 'Projects' },
   { id: 'skills', icon: '★', title: 'Skills' },
   { id: 'gallery', icon: '★', title: 'Gallery' },
   { id: 'contact', icon: '★', title: 'Contact' },
-  { id: 'blog', icon: '★', title: 'Blog' },
   { id: 'guestbook', icon: '★', title: 'Guestbook' },
+  { id: 'blog', icon: '★', title: 'Blog' },
 ]
 
 function MobileMenuBar() {
@@ -73,16 +72,31 @@ function MobileCard({ icon, title, children }) {
   )
 }
 
+function WelcomeModal({ onClose }) {
+  return (
+    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-6 bg-black/60 backdrop-blur-sm">
+      <div className="w-full max-w-sm bg-retro-light border-[3px] border-retro-border-dark border-t-retro-border-light border-l-retro-border-light shadow-retro-focus animate-window-open">
+        {/* Title bar */}
+        <div className="titlebar-highlight h-[30px] bg-gradient-to-b from-[#9d8a6f] to-retro-dark border-b-2 border-retro-border-dark flex items-center px-2.5 select-none relative">
+          <div className="flex items-center gap-2 text-retro-text-light [text-shadow:1px_1px_0_rgba(0,0,0,0.5)]">
+            <span className="text-xs">★</span>
+            <span className="font-pixel text-[8px] font-bold">Gian Ace Buaquiña</span>
+          </div>
+        </div>
+        {/* Content */}
+        <div className="p-5">
+          <WelcomeContent onExplore={onClose} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
 export default function MobileLayout() {
-  const handleExplore = () => {
-    const aboutSection = document.getElementById('mobile-section-about')
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const [showWelcome, setShowWelcome] = useState(true)
 
   const contentMap = {
-    welcome: <WelcomeContent onExplore={handleExplore} />,
     about: <AboutContent />,
     projects: <ProjectsContent isMaximized={false} />,
     skills: <SkillsContent />,
@@ -94,6 +108,7 @@ export default function MobileLayout() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-retro-dark to-retro-border-dark">
+      {showWelcome && <WelcomeModal onClose={() => setShowWelcome(false)} />}
       <MobileMenuBar />
 
       <div className="mobile-scroll-container flex flex-col gap-4 p-4 pb-8">

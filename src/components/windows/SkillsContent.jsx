@@ -1,7 +1,7 @@
 const skillCategories = [
   { title: 'Languages', tags: ['JavaScript', 'Python', 'HTML/CSS', 'TypeScript'] },
-  { title: 'Frameworks', tags: ['React', 'Node.js', 'Vue.js'] },
-  { title: 'Tools', tags: ['Git', 'VSCode', 'Supabase'] },
+  { title: 'Frameworks & Libraries', tags: ['React', 'Node.js', 'Vue.js', 'Vite', 'Tailwind CSS', 'PostCSS'] },
+  { title: 'Tools & Platforms', tags: ['Git', 'GitHub', 'VSCode', 'Vercel', 'Supabase', 'npm', 'Figma'] },
 ]
 
 export default function SkillsContent() {
