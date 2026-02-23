@@ -4,9 +4,9 @@ A nostalgic Windows 95-inspired portfolio website with a working desktop environ
 
 ![Portfolio Preview](public/images/preview.png)
 
-## ✨ Features
+##  Features
 
-- **Retro Desktop UI** - Authentic Windows 95 aesthetic with pixelated fonts and classic window chrome
+- **Vintage Desktop UI** - Authentic Windows 95 aesthetic with pixelated fonts and classic window chrome
 - **Draggable Windows** - Fully interactive windows with minimize, maximize, and close functionality
 - **Desktop Icons** - Click to launch different sections (About, Projects, Skills, Contact, Gallery, Blog, Guestbook)
 - **Spotify Widget** - Real-time display of your recently played tracks with album art
@@ -14,7 +14,7 @@ A nostalgic Windows 95-inspired portfolio website with a working desktop environ
 - **Keyboard Shortcuts** - Press `ESC` to close the active window
 - **Window Management** - Proper z-index stacking, focus handling, and minimize functionality
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** React 18, Vite 6
 - **Styling:** Tailwind CSS with custom retro theme
@@ -23,7 +23,7 @@ A nostalgic Windows 95-inspired portfolio website with a working desktop environ
 - **Deployment:** Vercel
 - **Font:** VT323, Press Start 2P
 
-## 📦 Installation
+##  Installation
 
 1. **Clone the repository**
    ```bash
@@ -45,7 +45,7 @@ A nostalgic Windows 95-inspired portfolio website with a working desktop environ
    SPOTIFY_REFRESH_TOKEN=your_spotify_refresh_token
    ```
 
-## 🎵 Spotify Setup
+##  Spotify Setup
 
 To display your recently played tracks, you need to set up Spotify API credentials:
 
@@ -90,7 +90,7 @@ $response.refresh_token
 
 **Step 4:** Copy the `refresh_token` and add it to your `.env` file.
 
-## 🚀 Development
+##  Development
 
 ### Run with Vercel CLI (supports serverless functions)
 ```bash
@@ -105,7 +105,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 npm run dev
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── api/
@@ -134,7 +134,7 @@ npm run dev
 └── package.json
 ```
 
-## 🌐 Deployment
+##  Deployment
 
 ### Deploy to Vercel
 
@@ -160,7 +160,7 @@ npm run dev
 4. **Deploy**
    - Vercel will automatically deploy on every push to `main`
 
-## 🎨 Customization
+##  Customization
 
 ### Colors
 Edit the Tailwind theme in `tailwind.config.js`:
@@ -184,11 +184,11 @@ Add new windows by:
 ### Desktop Background
 Replace `public/images/background.jpg` with your own image.
 
-## 📝 License
+##  License
 
 MIT License - feel free to use this project for your own portfolio!
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Retro design inspired by Windows 95
 - Font: [VT323](https://fonts.google.com/specimen/VT323) by Peter Hull
@@ -196,4 +196,4 @@ MIT License - feel free to use this project for your own portfolio!
 
 ---
 
-**Made with ♥ by Gian Ace Buaquiña**
+**Made with <3 by Gian**
