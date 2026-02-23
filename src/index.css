@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 /* ============================================
-   RETRO THEME - Global Styles
+   Global Styles
    ============================================ */
 
-/* Pixelated text rendering for retro feel */
+/* Pixelated text rendering */
 * {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: none;
@@ -40,7 +40,7 @@ body {
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.3);
 }
 
-/* Retro button shine effect */
+/* Button shine effect */
 .retro-btn::before {
   content: '';
   position: absolute;

@@ -1,4 +1,5 @@
 import DesktopIcon from './DesktopIcon'
+import SpotifyWidget from './SpotifyWidget'
 import Window from './Window'
 import WelcomeContent from './windows/WelcomeContent'
 import AboutContent from './windows/AboutContent'
@@ -7,6 +8,7 @@ import SkillsContent from './windows/SkillsContent'
 import ContactContent from './windows/ContactContent'
 import BlogContent from './windows/BlogContent'
 import GalleryContent from './windows/GalleryContent'
+import GuestbookContent from './windows/GuestbookContent'
 
 const icons = [
   { id: 'about', label: 'About Me' },
@@ -15,6 +17,7 @@ const icons = [
   { id: 'contact', label: 'Contact' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'blog', label: 'Blog' },
+  { id: 'guestbook', label: 'Guestbook' },
 ]
 
 const windowConfigs = [
@@ -25,6 +28,7 @@ const windowConfigs = [
   { id: 'contact', icon: '★', title: 'Contact' },
   { id: 'blog', icon: '★', title: 'Blog' },
   { id: 'gallery', icon: '★', title: 'Gallery' },
+  { id: 'guestbook', icon: '★', title: 'Guestbook' },
 ]
 
 export default function Desktop({
@@ -49,10 +53,14 @@ export default function Desktop({
     contact: <ContactContent />,
     blog: <BlogContent />,
     gallery: <GalleryContent isMaximized={windows.gallery.maximized} />,
+    guestbook: <GuestbookContent />,
   }
 
   return (
     <div className="desktop-bg relative w-screen h-[calc(100vh-30px)] overflow-hidden mt-[30px]">
+      {/* Spotify Recently Played Widget */}
+      <SpotifyWidget />
+
       {/* Desktop Icons */}
       <div className="absolute left-5 top-5 flex flex-col gap-6 z-[5]">
         {icons.map((icon) => (

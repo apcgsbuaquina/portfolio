@@ -6,6 +6,7 @@ import SkillsContent from './windows/SkillsContent'
 import ContactContent from './windows/ContactContent'
 import BlogContent from './windows/BlogContent'
 import GalleryContent from './windows/GalleryContent'
+import GuestbookContent from './windows/GuestbookContent'
 
 const sections = [
   { id: 'welcome', icon: '★', title: 'Gian Ace Buaquiña' },
@@ -15,6 +16,7 @@ const sections = [
   { id: 'gallery', icon: '★', title: 'Gallery' },
   { id: 'contact', icon: '★', title: 'Contact' },
   { id: 'blog', icon: '★', title: 'Blog' },
+  { id: 'guestbook', icon: '★', title: 'Guestbook' },
 ]
 
 function MobileMenuBar() {
@@ -87,6 +89,7 @@ export default function MobileLayout() {
     contact: <ContactContent />,
     blog: <BlogContent />,
     gallery: <GalleryContent isMaximized={false} />,
+    guestbook: <GuestbookContent />,
   }
 
   return (
@@ -105,7 +108,7 @@ export default function MobileLayout() {
         {/* Footer */}
         <div className="text-center py-4">
           <p className="font-pixel text-[7px] text-retro-text-light opacity-60">
-            © 2026 Gian Ace Buaquiña · retroOS
+            © 2026 Gian Ace Buaquiña
           </p>
         </div>
       </div>

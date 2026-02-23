@@ -2,13 +2,14 @@ import { useRef } from 'react'
 import useDrag from '../hooks/useDrag'
 
 const defaultPositions = {
-  welcome: { top: '50%', left: '50%', width: 500, height: 400, transform: 'translate(-50%, -50%)' },
+  welcome: { top: '50%', left: '50%', width: 500, height: 240, transform: 'translate(-50%, -50%)' },
   about: { top: '15%', left: '25%', width: 600, height: 350 },
   projects: { top: '20%', left: '30%', width: 300, height: 415 },
   skills: { top: '15%', left: '35%', width: 360, height: 300 },
   contact: { top: '20%', left: '25%', width: 540, height: 200 },
   blog: { top: '18%', left: '30%', width: 470, height: 370 },
   gallery: { top: '20%', left: '30%', width: 500, height: 400 },
+  guestbook: { top: '15%', left: '25%', width: 520, height: 480 },
 }
 
 export default function Window({

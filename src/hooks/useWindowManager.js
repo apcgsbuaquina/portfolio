@@ -9,6 +9,7 @@ export default function useWindowManager() {
     contact: { active: false, minimized: false, maximized: false, zIndex: 10 },
     blog: { active: false, minimized: false, maximized: false, zIndex: 10 },
     gallery: { active: false, minimized: false, maximized: false, zIndex: 10 },
+    guestbook: { active: false, minimized: false, maximized: false, zIndex: 10 },
   })
 
   const zIndexCounter = useRef(100)
