@@ -1,6 +1,39 @@
 import { useMemo, useState } from 'react'
 
-const photos = ['/images/gallery/pfp.png']
+const photos = [
+  '/images/gallery/anik.jpg',
+  '/images/gallery/barn.jpg',
+  '/images/gallery/bldgs.jpg',
+  '/images/gallery/blk.jpg',
+  '/images/gallery/borgar.jpg',
+  '/images/gallery/cats.jpg',
+  '/images/gallery/chess.jpg',
+  '/images/gallery/city.jpg',
+  '/images/gallery/crepe.jpg',
+  '/images/gallery/dragonfly.jpg',
+  '/images/gallery/fireworks.jpg',
+  '/images/gallery/flowers.jpg',
+  '/images/gallery/flowers2.jpg',
+  '/images/gallery/harlan.jpg',
+  '/images/gallery/honey.jpg',
+  '/images/gallery/mango.jpg',
+  '/images/gallery/morning.jpg',
+  '/images/gallery/mountain.jpg',
+  '/images/gallery/nodle.jpg',
+  '/images/gallery/people.jpg',
+  '/images/gallery/pikachu.jpg',
+  '/images/gallery/pine.jpg',
+  '/images/gallery/ppl.jpg',
+  '/images/gallery/ppl2.jpg',
+  '/images/gallery/ppl3.jpg',
+  '/images/gallery/rocks.jpg',
+  '/images/gallery/sea.jpg',
+  '/images/gallery/sea2.jpg',
+  '/images/gallery/sea3.jpg',
+  '/images/gallery/sunset.jpg',
+  '/images/gallery/tickets.jpg',
+  '/images/gallery/totoro.jpg',
+]
 
 export default function GalleryContent({ isMaximized = false }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -45,7 +78,7 @@ export default function GalleryContent({ isMaximized = false }) {
           </div>
         ) : (
           <div className="my-4">
-            <div className="aspect-square bg-retro-beige border-2 border-retro-border-dark overflow-hidden mb-3">
+            <div className="w-full max-w-[220px] mx-auto aspect-square bg-retro-beige border-2 border-retro-border-dark overflow-hidden mb-3">
               <img src={currentPhoto} alt={`Gallery ${currentIndex + 1}`} className="w-full h-full object-cover" />
             </div>
             <div className="flex items-center justify-between">

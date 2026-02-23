@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const projects = [
   {
-    image: 'public/images/projects/Mindle.png',
+    image: '/images/projects/Mindle.png',
     title: 'Mindle',
     description:
       'This is the first ever project I have contributed on, this stone paved the way for many more projects to come. Anyway, it\'s a simple mental health tracker I built on my first year.',
