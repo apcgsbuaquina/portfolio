@@ -25,7 +25,9 @@ async function getAccessToken() {
   })
 
   if (!res.ok) {
-    throw new Error(`Token refresh failed: ${res.status}`)
+    const errorData = await res.text()
+    console.error('Token refresh failed:', res.status, errorData)
+    throw new Error(`Token refresh failed: ${res.status} - ${errorData}`)
   }
 
   return res.json()
@@ -38,6 +40,19 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=30')
 
   try {
+    // Verify env vars are set
+    if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
+      console.error('Missing environment variables:', {
+        hasClientId: !!CLIENT_ID,
+        hasClientSecret: !!CLIENT_SECRET,
+        hasRefreshToken: !!REFRESH_TOKEN,
+      })
+      return res.status(500).json({ 
+        error: 'Server configuration error',
+        details: 'Missing Spotify credentials'
+      })
+    }
+
     const { access_token } = await getAccessToken()
 
     const spotifyRes = await fetch(RECENTLY_PLAYED_URL, {
@@ -64,7 +79,10 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ tracks })
   } catch (err) {
-    console.error('Spotify API error:', err)
-    return res.status(500).json({ error: 'Failed to fetch recently played' })
+    console.error('Spotify API error:', err.message, err.stack)
+    return res.status(500).json({ 
+      error: 'Failed to fetch recently played',
+      message: err.message
+    })
   }
 }
